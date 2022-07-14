@@ -1,0 +1,20 @@
+.background{
+    
+    -fx-background-image: url("drake.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center, center;  
+}
+.button{
+    
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+.button:hover{
+    
+    -fx-text-fill: #1089da;
+}
+.panda {
+    -fx-background-image: url("gui/panda.jpg");
+}

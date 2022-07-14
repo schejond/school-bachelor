@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1263.0" prefWidth="2109.0" styleClass="background" stylesheets="@css_background.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <children>
+      <ImageView fitHeight="99.0" fitWidth="110.0" layoutX="1364.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true" styleClass="panda" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
+         <image>
+            <Image url="@panda.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="pvpbutonik" alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="246.0" mnemonicParsing="false" onAction="#localPvPGame" prefHeight="67.0" prefWidth="370.0" text="Hra dvou hráčů" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="36.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="306.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="370.0" text="Hra proti počítači" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="36.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="366.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="370.0" text="Hra po internetu" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="36.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="500.0" layoutY="435.0" mnemonicParsing="false" onAction="#end" prefHeight="67.0" prefWidth="370.0" text="Konec" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="40.0" />
+         </font>
+      </Button>
+      <Label layoutX="496.0" layoutY="100.0" text="THE DRAKE " textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="72.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="760.0" text="©schejond, pohannat" textFill="#c65f30" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+Správce souborů
+
+Program na správu souborů/adresářů (inspirace Midnight Commander).
+
+Implementujte následující funkcionalitu:
+
+vytváření a mazání souborů/adresářů/symbolických linků
+kopírování a přesun souborů/adresářů/symbolických linků
+možnost provádět předchozí operace nad množinou soborů definovaných regulárním výrazem
+navigace mezi jednotlivými adresáři
+uživatelské rozhraní: zobrazení adresářů nad kterými se pracuje a vizuální rozlišení souborů/adresářů/symbolických linků
+Dobrovolné možné rozšíření:
+
+dva panely uživatelského rozhraní
+GUI
+Použití polymorfismu (doporučené):
+
+operace se soubory
+typy souborů
+uživatelské rozhraní

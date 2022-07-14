@@ -1,0 +1,31 @@
+# Write your rules to this file
+# Rules could be on more lines, but must end with semicolon (;)
+# You can use hash tag for comment lines, block comments are not supported
+# Grammar definition is described in documentation
+
+# postaveni zakladny
+IF player_dont_have_base AND find_suitable_place_for_king* THEN build_base find_suitable_place_for_king;
+
+# opevneni zakladny
+#IF direction_from_base_is_empty* RIGHT_UP AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* RIGHT_DOWN AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* LEFT_UP AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* LEFT_DOWN AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* UP AND money > 4 THEN place_archer_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* DOWN AND money > 4 THEN place_archer_on_given_position direction_from_base_is_empty;
+
+# fuzzy rules
+IF money == too_much THEN spawn_archers_fuzzy many;
+IF money == enough THEN spawn_archers_fuzzy few;
+#IF base_health == half THEN spawn_archers_fuzzy few;
+IF base_health == low AND money == lot THEN spawn_archers_fuzzy many;
+IF base_health == low AND money == enough THEN spawn_archers_fuzzy medium;
+IF base_health == low AND money == low THEN spawn_archers_fuzzy few;
+
+#IF closest_enemy_distance == close AND money = enough THEN spawn_archers_fuzzy few;
+
+# unused rules
+# IF base_in_danger* AND money > 24 THEN place_knight_near_king_save_him base_in_danger;
+#IF money > 31 AND free_tile_near_king* THEN build_knight_near_king free_tile_near_king;
+# capturing villages with archers
+#IF base_protected AND visible_free_tile* village AND money > 4 THEN build_archer visible_free_tile;

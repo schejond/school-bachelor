@@ -1,0 +1,21 @@
+# Write your rules to this file
+# Rules could be on more lines, but must end with semicolon (;)
+# You can use hashtag for comment lines, block comments are not supported
+# Grammar definition is described in documentation
+
+
+IF player_dont_have_base THEN build_base 0 0;
+
+#protect king from all sites
+IF right_up_from_base_is_empty AND has_enough_resources_for_knight THEN place_knight_right_up_from_base;
+IF right_down_from_base_is_empty AND has_enough_resources_for_knight THEN place_knight_right_down_from_base;
+IF left_up_from_base_is_empty AND has_enough_resources_for_knight THEN place_knight_left_up_from_base;
+IF left_down_from_base_is_empty AND has_enough_resources_for_knight THEN place_knight_left_down_from_base;
+
+IF up_from_base_is_empty AND has_enough_resources_for_magician THEN place_magician_up_from_base;
+IF down_from_base_is_empty AND has_enough_resources_for_magician THEN place_magician_down_from_base;
+
+IF empty_village_is_visible AND has_enough_resources_for_archer THEN place_archer_on_all_visible_villages;
+
+#kdyz se zmeni na knighty tak to vydrzi dele
+IF has_at_least_130_gold AND some_visible_tile_is_not_occupied THEN place_druid_on_closest_visible_tile;

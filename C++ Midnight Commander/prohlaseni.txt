@@ -1,0 +1,3 @@
+Prohlašuji, že jsem diplomovou práci na téma „Správce souborů“ vypracoval samostatně.
+V mé práci byla použita šablona pro vytvoření dokumentace. Převzáno ze stránky https://gitlab.fit.cvut.cz/bernhdav/bi-pa2-uschovna/blob/master/Doxyfile.
+Ondřej Schejbal

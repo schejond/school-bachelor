@@ -1,0 +1,41 @@
+th {
+  padding: 1em;
+}
+.full-width-table {
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.checkbox-margin {
+  margin: 0 10px;
+}
+
+.firstLine-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.left-margin16 {
+  margin-left: 16px;
+}
+
+.font-calibri {
+  font-family: Calibri;
+}

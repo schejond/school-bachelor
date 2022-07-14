@@ -1,0 +1,10 @@
+#!/bin/bash
+for i in 00 01 02 03 04 05 06 07 08 10 11
+do
+	diff output_${i}.img ref_${i}.img
+done
+#big endian
+#for i in 00 01 02 03 04 05 06 07
+#do
+#        diff output_${i}.img ref_${i}.img
+#done

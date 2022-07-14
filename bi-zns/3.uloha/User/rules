@@ -1,0 +1,89 @@
+# Write your rules to this file
+# Rules could be on more lines, but must end with semicolon (;)
+# You can use hash tag for comment lines, block comments are not supported
+# Grammar definition is described in documentation
+
+# postaveni zakladny
+IF player_dont_have_base AND find_suitable_place_for_king* THEN build_base find_suitable_place_for_king;
+
+# opevneni zakladny
+IF direction_from_base_is_empty* RIGHT_UP [0.8] AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+IF direction_from_base_is_empty* RIGHT_DOWN [0.8] AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+IF direction_from_base_is_empty* LEFT_UP [0.8] AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+IF direction_from_base_is_empty* LEFT_DOWN [0.8] AND money > 11 THEN place_knight_on_given_position direction_from_base_is_empty;
+
+#IF direction_from_base_is_empty* UP [0.8] AND money > 4 THEN place_archer_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* DOWN [0.8] AND money > 4 THEN place_archer_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* UP [0.8] AND money > 29 THEN place_magician_on_given_position direction_from_base_is_empty;
+#IF direction_from_base_is_empty* DOWN [0.8] AND money > 29 THEN place_magician_on_given_position direction_from_base_is_empty;
+IF direction_from_base_is_empty* UP [0.8] AND money > 24 THEN place_druid_on_given_position direction_from_base_is_empty;
+IF direction_from_base_is_empty* DOWN [0.8] AND money > 24 THEN place_druid_on_given_position direction_from_base_is_empty;
+
+# IF base_in_danger* AND money > 24 THEN place_knight_near_king_save_him base_in_danger WITH 0.9;
+IF base_low_on_health* [0.85] AND money > 24 THEN place_knight_near_king_low_health base_low_on_health WITH 0.95;
+
+# reakce na cyclopa
+IF base_protected AND cyclop_approaching_from_up* up [0.78] AND money > 11 THEN place_knight_on_given_position_up_cyclop cyclop_approaching_from_up;
+IF base_protected AND cyclop_approaching_from_down* down [0.78] AND money > 11 THEN place_knight_on_given_position_down_cyclop cyclop_approaching_from_down;
+IF base_protected AND cyclop_approaching_from_right* right [0.78] AND money > 11 THEN place_knight_on_given_position_right_cyclop cyclop_approaching_from_right;
+IF base_protected AND cyclop_approaching_from_left* left [0.78] AND money > 11 THEN place_knight_on_given_position_left_cyclop cyclop_approaching_from_left;
+
+# reakce na demona - druid
+#IF base_protected AND demon_approaching_from_up* up [0.93] AND money > 24 THEN place_druid_on_given_position_up_demon demon_approaching_from_up;
+#IF base_protected AND demon_approaching_from_down* down [0.93] AND money > 24 THEN place_druid_on_given_position_down_demon demon_approaching_from_down;
+#IF base_protected AND demon_approaching_from_right* right [0.93] AND money > 24 THEN place_druid_on_given_position_right_demon demon_approaching_from_right;
+#IF base_protected AND demon_approaching_from_left* left [0.93] AND money > 24 THEN place_druid_on_given_position_left_demon demon_approaching_from_left;
+# reakce na demona - knight
+IF base_protected AND demon_approaching_from_up* up [0.93] AND money > 11 THEN place_knight_on_given_position_up_demon demon_approaching_from_up;
+IF base_protected AND demon_approaching_from_down* down [0.93] AND money > 11 THEN place_knight_on_given_position_down_demon demon_approaching_from_down;
+IF base_protected AND demon_approaching_from_right* right [0.93] AND money > 11 THEN place_knight_on_given_position_right_demon demon_approaching_from_right;
+IF base_protected AND demon_approaching_from_left* left [0.93] AND money > 11 THEN place_knight_on_given_position_left_demon demon_approaching_from_left;
+
+# reakce na elementala
+IF base_protected AND elemental_approaching_from_up* up [0.516] AND money > 24 THEN place_druid_on_given_position_up_elemental elemental_approaching_from_up;
+IF base_protected AND elemental_approaching_from_down* down [0.516] AND money > 24 THEN place_druid_on_given_position_down_elemental elemental_approaching_from_down;
+IF base_protected AND elemental_approaching_from_right* right [0.516] AND money > 24 THEN place_druid_on_given_position_right_elemental elemental_approaching_from_right;
+IF base_protected AND elemental_approaching_from_left* left [0.516] AND money > 24 THEN place_druid_on_given_position_left_elemental elemental_approaching_from_left;
+
+# reakce na gargoyla
+IF base_protected AND gargoyle_approaching_from_up* up [0.43] AND money > 11 THEN place_knight_on_given_position_up_gargoyle gargoyle_approaching_from_up;
+IF base_protected AND gargoyle_approaching_from_down* down [0.43] AND money > 11 THEN place_knight_on_given_position_down_gargoyle gargoyle_approaching_from_down;
+IF base_protected AND gargoyle_approaching_from_right* right [0.43] AND money > 11 THEN place_knight_on_given_position_right_gargoyle gargoyle_approaching_from_right;
+IF base_protected AND gargoyle_approaching_from_left* left [0.43] AND money > 11 THEN place_knight_on_given_position_left_gargoyle gargoyle_approaching_from_left;
+
+# reakce na minotaura
+IF base_protected AND minotaur_approaching_from_up* up [1] AND money > 24 THEN place_druid_on_given_position_up_minotaur minotaur_approaching_from_up;
+IF base_protected AND minotaur_approaching_from_down* down [1] AND money > 24 THEN place_druid_on_given_position_down_minotaur minotaur_approaching_from_down;
+IF base_protected AND minotaur_approaching_from_right* right [1] AND money > 24 THEN place_druid_on_given_position_right_minotaur minotaur_approaching_from_right;
+IF base_protected AND minotaur_approaching_from_left* left [1] AND money > 24 THEN place_druid_on_given_position_left_minotaur minotaur_approaching_from_left;
+
+# reakce na necromancera
+IF base_protected AND necromancer_approaching_from_up* up [0.65] AND money > 4 THEN place_archer_on_given_position_up_necromancer necromancer_approaching_from_up;
+IF base_protected AND necromancer_approaching_from_down* down [0.65] AND money > 4 THEN place_archer_on_given_position_down_necromancer necromancer_approaching_from_down;
+IF base_protected AND necromancer_approaching_from_right* right [0.65] AND money > 4 THEN place_archer_on_given_position_right_necromancer necromancer_approaching_from_right;
+IF base_protected AND necromancer_approaching_from_left* left [0.65] AND money > 4 THEN place_archer_on_given_position_left_necromancer necromancer_approaching_from_left;
+
+# reakce na orca
+IF base_protected AND orc_approaching_from_up* up [0.35] AND money > 4 THEN place_archer_on_given_position_up_orc orc_approaching_from_up;
+IF base_protected AND orc_approaching_from_down* down [0.35] AND money > 4 THEN place_archer_on_given_position_down_orc orc_approaching_from_down;
+IF base_protected AND orc_approaching_from_right* right [0.35] AND money > 4 THEN place_archer_on_given_position_right_orc orc_approaching_from_right;
+IF base_protected AND orc_approaching_from_left* left [0.35] AND money > 4 THEN place_archer_on_given_position_left_orc orc_approaching_from_left;
+
+# reakce na skeletona
+IF base_protected AND skeleton_approaching_from_up* up [0.33] AND money > 4 THEN place_archer_on_given_position_up_skeleton skeleton_approaching_from_up;
+IF base_protected AND skeleton_approaching_from_down* down [0.33] AND money > 4 THEN place_archer_on_given_position_down_skeleton skeleton_approaching_from_down;
+IF base_protected AND skeleton_approaching_from_right* right [0.33] AND money > 4 THEN place_archer_on_given_position_right_skeleton skeleton_approaching_from_right;
+IF base_protected AND skeleton_approaching_from_left* left [0.33] AND money > 4 THEN place_archer_on_given_position_left_skeleton skeleton_approaching_from_left;
+
+# if I have enough resources -> spawn some unit near king
+IF money > 31 AND free_tile_near_king* THEN build_knight_near_king free_tile_near_king;
+IF money > 35 AND free_tile_near_king* THEN build_druid_near_king free_tile_near_king;
+
+# capturing villages with archers
+IF base_protected AND visible_free_tile* village [0.85] AND money > 4 THEN build_archer visible_free_tile WITH 0.9;
+
+# unused rules
+#IF money > 70 AND free_tile_near_king* THEN build_ent_near_king free_tile_near_king;
+#IF money > 55 AND free_tile_near_king* THEN build_magician_near_king free_tile_near_king;
+# spawn archer every odd turn
+# IF money > 4 AND odd_round AND free_tile_near_king* AND base_protected THEN build_archer_near_king free_tile_near_king;

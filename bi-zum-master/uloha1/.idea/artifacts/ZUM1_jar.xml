@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ZUM1:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ZUM1_jar</output-path>
+    <root id="archive" name="ZUM1.jar">
+      <element id="module-output" name="ZUM1" />
+    </root>
+  </artifact>
+</component>

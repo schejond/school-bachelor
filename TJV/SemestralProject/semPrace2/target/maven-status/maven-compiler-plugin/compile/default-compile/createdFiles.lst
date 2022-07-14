@@ -1,0 +1,15 @@
+Entities\Order_.class
+Entities\Contact.class
+Controllers\AbstractCRUDController.class
+Entities\Contact_.class
+Rest\AbstractCRUDResource.class
+Entities\Customer.class
+Entities\Customer_.class
+Rest\OrderResource.class
+Controllers\ContactController.class
+Controllers\OrderController.class
+Entities\Order.class
+Controllers\CustomerController.class
+Rest\ContactResource.class
+Rest\CustomerResource.class
+Rest\semestralkaEndpoint.class
